@@ -1,20 +1,13 @@
 package com.sample.controller;
 
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-@EnableAutoConfiguration
 public class TestController {
 
-    @RequestMapping("/")
-    String home() {
+    @RequestMapping("/hello")
+    public String home() {
         return "Hello World!";
     }
-
-    public static void main(String[] args) {
-        SpringApplication.run(TestController.class, args);
-    }
-
 }
