@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TestController {
 
     @RequestMapping("/hello")
-    public String home() {
+    public String home() throws Exception {
+        Thread.sleep(500);
         return "Hello World!";
     }
 }
